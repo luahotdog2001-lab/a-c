@@ -6,200 +6,94 @@
 <title>ENGLISH BATTLE ARENA</title>
 <style>
 :root{--bg:#090d18;--panel:#111a2b;--panel2:#17233a;--line:#2b3b5c;--text:#edf2ff;--muted:#91a0bd;--blue:#6487ff;--cyan:#48d8e8;--red:#ff5b75;--green:#43d6a0;--gold:#ffc66b}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 15% 0%,#1a2850 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial,"Malgun Gothic",sans-serif}button,input{font:inherit}button{border:0;cursor:pointer;color:white;background:linear-gradient(135deg,#6688ff,#4566df);padding:12px 16px;border-radius:10px;font-weight:800;transition:.15s}button:hover{filter:brightness(1.12);transform:translateY(-1px)}button:disabled{opacity:.45;cursor:not-allowed;transform:none}.ghost{background:#202d48;border:1px solid var(--line)}.danger{background:linear-gradient(135deg,#ff627c,#d83e5b)}.good{background:linear-gradient(135deg,#42d7a1,#20a879)}input{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:#0a1221;color:white;outline:none;margin:6px 0 12px}input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #6487ff22}label{display:block;font-size:13px;color:var(--muted);font-weight:700}.hidden{display:none!important}.muted{color:var(--muted)}.small{font-size:12px}.tag{display:inline-block;color:#9db4ff;background:#26365f;border:1px solid #40588e;padding:5px 9px;border-radius:6px;font-size:11px;font-weight:900;letter-spacing:2px}.wrap{max-width:1180px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:24px}.brand{font-size:13px;letter-spacing:3px;font-weight:900;color:#9bb1ff}.card{background:linear-gradient(145deg,#17233aee,#0f1929ee);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 16px 50px #0004}.auth-layout{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:36px;max-width:1100px;margin:auto;padding:30px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:16px 0}.hero h1 span{color:var(--cyan)}.hero p{max-width:470px;line-height:1.7;color:var(--muted)}.auth-card{max-width:430px;width:100%;justify-self:end}.tabs{display:flex;gap:8px;margin:18px 0}.tabs button{flex:1}.tabs .active{background:linear-gradient(135deg,#6487ff,#48b8e8)}.msg{min-height:22px;color:var(--red);font-size:13px;line-height:1.5}.note{font-size:11px;color:var(--muted);line-height:1.6;margin-top:16px}.app-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.user-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.pill{border:1px solid var(--line);background:#0c1525;padding:8px 12px;border-radius:30px;font-size:12px}.main-grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:18px;margin-top:20px}.game-card{padding:12px}.game-head{display:flex;justify-content:space-between;align-items:center;padding:8px 8px 14px}.stats{display:flex;gap:8px;flex-wrap:wrap}.stat{background:#0b1424;border:1px solid var(--line);padding:7px 10px;border-radius:8px;font-size:12px}.arena{position:relative;width:100%;aspect-ratio:16/10;min-height:330px;background:#080f1d;border:1px solid #33466b;border-radius:12px;overflow:hidden}.arena canvas{width:100%;height:100%;display:block}.overlay{position:absolute;inset:0;display:grid;place-items:center;background:#060b15b8;backdrop-filter:blur(5px);text-align:center;padding:20px}.overlay-box{max-width:420px}.overlay h2{font-size:32px;margin:0 0 8px}.overlay p{color:var(--muted);line-height:1.6}.side{display:flex;flex-direction:column;gap:14px}.side h3{margin:0 0 10px}.key{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #273653;color:var(--muted);font-size:13px}.admin{margin-top:20px}.admin-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.admin-grid{display:grid;grid-template-columns:180px 1fr;gap:14px;margin-top:16px}.admin-nav{display:flex;flex-direction:column;gap:7px}.admin-nav button{text-align:left;background:#1a2943}.admin-content{min-width:0;overflow:auto}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}.table th{color:#9eb4e7}.notice{padding:12px 0;border-bottom:1px solid var(--line)}.notice b{display:block;margin-bottom:5px}.notice small{color:var(--muted)}.bar{height:8px;border-radius:9px;background:#273653;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));width:100%}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 15% 0%,#1a2850 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial,"Malgun Gothic",sans-serif}button,input,textarea{font:inherit}button{border:0;cursor:pointer;color:white;background:linear-gradient(135deg,#6688ff,#4566df);padding:12px 16px;border-radius:10px;font-weight:800;transition:.15s}button:hover{filter:brightness(1.12);transform:translateY(-1px)}button:disabled{opacity:.45;cursor:not-allowed;transform:none}.ghost{background:#202d48;border:1px solid var(--line)}.danger{background:linear-gradient(135deg,#ff627c,#d83e5b)}.good{background:linear-gradient(135deg,#42d7a1,#20a879)}input,textarea{width:100%;padding:13px 14px;border-radius:10px;border:1px solid var(--line);background:#0a1221;color:white;outline:none;margin:6px 0 12px}input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #6487ff22}label{display:block;font-size:13px;color:var(--muted);font-weight:700}.hidden{display:none!important}.muted{color:var(--muted)}.small{font-size:12px}.tag{display:inline-block;color:#9db4ff;background:#26365f;border:1px solid #40588e;padding:5px 9px;border-radius:6px;font-size:11px;font-weight:900;letter-spacing:2px}.wrap{max-width:1180px;margin:auto;padding:28px}.brand{font-size:13px;letter-spacing:3px;font-weight:900;color:#9bb1ff}.card{background:linear-gradient(145deg,#17233aee,#0f1929ee);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 16px 50px #0004}.auth-layout{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:36px;max-width:1100px;margin:auto;padding:30px}.hero h1{font-size:clamp(42px,7vw,78px);line-height:.95;margin:16px 0}.hero h1 span{color:var(--cyan)}.hero p{max-width:470px;line-height:1.7;color:var(--muted)}.auth-card{max-width:430px;width:100%;justify-self:end}.tabs{display:flex;gap:8px;margin:18px 0}.tabs button{flex:1}.tabs .active{background:linear-gradient(135deg,#6487ff,#48b8e8)}.msg{min-height:22px;color:var(--red);font-size:13px;line-height:1.5}.note{font-size:11px;color:var(--muted);line-height:1.6;margin-top:16px}.app-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.user-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.pill{border:1px solid var(--line);background:#0c1525;padding:8px 12px;border-radius:30px;font-size:12px}.main-grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:18px;margin-top:20px}.game-card{padding:12px}.game-head{display:flex;justify-content:space-between;align-items:center;padding:8px 8px 14px}.stats{display:flex;gap:8px;flex-wrap:wrap}.stat{background:#0b1424;border:1px solid var(--line);padding:7px 10px;border-radius:8px;font-size:12px}.arena{position:relative;width:100%;aspect-ratio:16/10;min-height:330px;background:#080f1d;border:1px solid #33466b;border-radius:12px;overflow:hidden}.arena canvas{width:100%;height:100%;display:block}.overlay{position:absolute;inset:0;display:grid;place-items:center;background:#060b15b8;backdrop-filter:blur(5px);text-align:center;padding:20px}.overlay-box{max-width:420px}.overlay h2{font-size:32px;margin:0 0 8px}.overlay p{color:var(--muted);line-height:1.6}.side{display:flex;flex-direction:column;gap:14px}.side h3{margin:0 0 10px}.key{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #273653;color:var(--muted);font-size:13px}.admin{margin-top:20px}.admin-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.admin-grid{display:grid;grid-template-columns:180px 1fr;gap:14px;margin-top:16px}.admin-nav{display:flex;flex-direction:column;gap:7px}.admin-nav button{text-align:left;background:#1a2943}.admin-content{min-width:0;overflow:auto}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{padding:10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}.table th{color:#9eb4e7}.notice{padding:12px 0;border-bottom:1px solid var(--line)}.notice b{display:block;margin-bottom:5px}.notice small{color:var(--muted)}.bar{height:8px;border-radius:9px;background:#273653;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));width:100%}
 @media(max-width:850px){.auth-layout{grid-template-columns:1fr;gap:20px}.auth-card{justify-self:center}.hero{text-align:center}.hero p{margin:auto}.main-grid{grid-template-columns:1fr}.admin-grid{grid-template-columns:1fr}.admin-nav{flex-direction:row;flex-wrap:wrap}.admin-nav button{flex:1;min-width:110px}.wrap{padding:16px}}
 </style>
 </head>
 <body>
 <section id="authView" class="auth-layout">
-  <div class="hero">
-    <span class="tag">ONLINE ENGLISH BATTLE</span>
-    <h1>ENGLISH<br><span>BATTLE</span><br>ARENA</h1>
-    <p>영어 실력으로 무기를 선택하고 전투에서 승리하세요. 로그인 후 게임을 시작할 수 있습니다.</p>
-    <div class="stats"><span class="stat">⚔️ 1인 전투 연습</span><span class="stat">🧠 영어 퀴즈</span><span class="stat">🏆 전투 기록</span></div>
-  </div>
+  <div class="hero"><span class="tag">ONLINE ENGLISH BATTLE</span><h1>ENGLISH<br><span>BATTLE</span><br>ARENA</h1><p>영어 실력으로 무기를 선택하고 전투에서 승리하세요. 로그인 후 게임을 시작할 수 있습니다.</p><div class="stats"><span class="stat">⚔️ 1인 전투 연습</span><span class="stat">🧠 영어 퀴즈</span><span class="stat">🏆 전투 기록</span></div></div>
   <div class="card auth-card">
-    <div class="brand">ACCOUNT ACCESS / 01</div>
-    <h2 id="authTitle">로그인</h2>
+    <div class="brand">ACCOUNT ACCESS / 01</div><h2 id="authTitle">로그인</h2>
     <div class="tabs"><button id="loginTab" class="active">로그인</button><button id="signupTab" class="ghost">회원가입</button></div>
-    <form id="authForm">
-      <label for="username">아이디</label><input id="username" maxlength="24" autocomplete="username" placeholder="영문 소문자 / 숫자 / _ / -" required>
+    <form id="authForm"><label for="username">아이디</label><input id="username" maxlength="24" autocomplete="username" placeholder="영문 소문자 / 숫자 / _ / -" required>
       <div id="nicknameWrap" class="hidden"><label for="nickname">게임 닉네임</label><input id="nickname" maxlength="8" placeholder="게임에서 사용할 닉네임"></div>
       <label for="password">비밀번호</label><input id="password" type="password" minlength="8" autocomplete="current-password" placeholder="8자 이상" required>
-      <button id="authSubmit" type="submit" style="width:100%">로그인</button>
-    </form>
+      <button id="authSubmit" type="submit" style="width:100%">로그인</button></form>
     <div id="authMessage" class="msg" role="status"></div>
-    <div class="note">계정 인증은 Supabase REST API를 직접 호출합니다. 별도 SDK, CDN, 프레임워크를 사용하지 않습니다. 회원가입 후 이메일 확인 기능은 Supabase에서 꺼져 있어야 합니다.</div>
+    <div class="note">계정과 공지 데이터는 이 브라우저의 저장 공간에 보관됩니다. 다른 기기와 자동으로 공유되지 않습니다.</div>
   </div>
 </section>
-
 <main id="appView" class="wrap hidden">
-  <header class="app-head">
-    <div><div class="brand">ENGLISH BATTLE ARENA</div><h2 style="margin:7px 0 0">전투 대기실</h2></div>
-    <div class="user-tools"><span id="userBadge" class="pill">회원</span><button id="adminOpen" class="ghost hidden">관리자 센터</button><button id="logout" class="danger">로그아웃</button></div>
-  </header>
-  <div class="main-grid">
-    <section class="card game-card">
-      <div class="game-head"><div><b>ARENA / TRAINING</b><div class="muted small">CPU 훈련 모드</div></div><div class="stats"><span id="hpStat" class="stat">❤️ HP 100</span><span id="scoreStat" class="stat">🏆 0 KILL</span><span id="timeStat" class="stat">⏱ 90</span></div></div>
-      <div class="arena"><canvas id="gameCanvas" width="960" height="600"></canvas><div id="gameOverlay" class="overlay"><div class="overlay-box"><span class="tag">READY TO FIGHT</span><h2>전투를 시작할까요?</h2><p>WASD로 이동하고 마우스 클릭으로 공격하세요. CPU를 처치하면 점수를 얻습니다.</p><button id="startGame">전투 시작</button></div></div></div>
-      <div class="user-tools" style="margin-top:12px"><button id="restart" class="ghost">다시 시작</button><span class="muted small">이 게임은 현재 단일 브라우저 CPU 연습 모드입니다.</span></div>
-    </section>
-    <aside class="side">
-      <div class="card"><h3>전투 상태</h3><div class="key"><span>플레이어 HP</span><b id="hpText">100 / 100</b></div><div class="bar"><i id="hpBar"></i></div><div class="key"><span>처치 수</span><b id="killsText">0</b></div><div class="key"><span>무기</span><b>에너지 블래스터</b></div></div>
-      <div class="card"><h3>조작 방법</h3><div class="key"><span>이동</span><b>W A S D</b></div><div class="key"><span>조준</span><b>마우스</b></div><div class="key"><span>공격</span><b>클릭 / Space</b></div><div class="key"><span>대시</span><b>Shift</b></div><div class="key"><span>재시작</span><b>R</b></div></div>
-      <div class="card"><h3>오늘의 영어</h3><b id="word">Victory</b><p id="meaning" class="muted">승리</p><button id="nextWord" class="ghost" style="width:100%">다른 단어 보기</button></div>
-    </aside>
-  </div>
-  <section id="adminPanel" class="card admin hidden">
-    <div class="admin-head"><div><span class="tag">SECURE CONTROL</span><h2 style="margin:8px 0">관리자 센터</h2></div><button id="adminClose" class="ghost">닫기</button></div>
-    <div class="admin-grid"><nav class="admin-nav"><button data-admin="overview">대시보드</button><button data-admin="members">회원 관리</button><button data-admin="notices">공지 관리</button><button data-admin="logs">작업 로그</button></nav><div id="adminContent" class="admin-content">관리자 메뉴를 선택하세요.</div></div>
-  </section>
+<header class="app-head"><div><div class="brand">ENGLISH BATTLE ARENA</div><h2 style="margin:7px 0 0">전투 대기실</h2></div><div class="user-tools"><span id="userBadge" class="pill">회원</span><button id="adminOpen" class="ghost hidden">관리자 센터</button><button id="logout" class="danger">로그아웃</button></div></header>
+<div class="main-grid">
+<section class="card game-card"><div class="game-head"><div><b>ARENA / TRAINING</b><div class="muted small">CPU 훈련 모드</div></div><div class="stats"><span id="hpStat" class="stat">❤️ HP 100</span><span id="scoreStat" class="stat">🏆 0 KILL</span><span id="timeStat" class="stat">⏱ 90</span></div></div>
+<div class="arena"><canvas id="gameCanvas" width="960" height="600"></canvas><div id="gameOverlay" class="overlay"><div class="overlay-box"><span class="tag">READY TO FIGHT</span><h2>전투를 시작할까요?</h2><p>WASD로 이동하고 마우스 클릭으로 공격하세요. CPU를 처치하면 점수를 얻습니다.</p><button id="startGame">전투 시작</button></div></div></div>
+<div class="user-tools" style="margin-top:12px"><button id="restart" class="ghost">다시 시작</button><span class="muted small">단일 브라우저 CPU 연습 모드</span></div></section>
+<aside class="side"><div class="card"><h3>전투 상태</h3><div class="key"><span>플레이어 HP</span><b id="hpText">100 / 100</b></div><div class="bar"><i id="hpBar"></i></div><div class="key"><span>처치 수</span><b id="killsText">0</b></div><div class="key"><span>무기</span><b>에너지 블래스터</b></div></div>
+<div class="card"><h3>조작 방법</h3><div class="key"><span>이동</span><b>W A S D</b></div><div class="key"><span>조준</span><b>마우스</b></div><div class="key"><span>공격</span><b>클릭 / Space</b></div><div class="key"><span>대시</span><b>Shift</b></div><div class="key"><span>재시작</span><b>R</b></div></div>
+<div class="card"><h3>오늘의 영어</h3><b id="word">Victory</b><p id="meaning" class="muted">승리</p><button id="nextWord" class="ghost" style="width:100%">다른 단어 보기</button></div></aside></div>
+<section id="adminPanel" class="card admin hidden"><div class="admin-head"><div><span class="tag">ADMIN CONTROL</span><h2 style="margin:8px 0">관리자 센터</h2></div><button id="adminClose" class="ghost">닫기</button></div>
+<div class="admin-grid"><nav class="admin-nav"><button data-admin="overview">대시보드</button><button data-admin="members">회원 관리</button><button data-admin="notices">공지 관리</button><button data-admin="logs">작업 로그</button></nav><div id="adminContent" class="admin-content">관리자 메뉴를 선택하세요.</div></div></section>
 </main>
-
 <script>
 "use strict";
-
-/* Supabase REST 직접 호출: 외부 SDK/CDN/프레임워크 없음 */
-const SUPABASE_URL = "https://xrdwvswwcgqapailbohf.supabase.co";
-const SUPABASE_KEY = "sb_publishable_zab5Z5Db9d0reeBnmbB0CQ_CcyZZwXr";
-const $ = id => document.getElementById(id);
-const state = {mode:"login",session:null,user:null,profile:null,adminPage:"overview"};
-const authView=$("authView"), appView=$("appView");
-function setMessage(message, bad=true){$("authMessage").textContent=message||"";$("authMessage").style.color=bad?"var(--red)":"var(--green)";}
-function usernameEmail(name){return name.toLowerCase()+"@example.com";}
-function validUsername(name){return /^[a-z0-9_-]{3,24}$/.test(name);}
-function headers(extra={}){return {"apikey":SUPABASE_KEY,"Content-Type":"application/json",...(state.session?.access_token?{Authorization:"Bearer "+state.session.access_token}:{}),...extra};}
-async function api(path, options={}){
-  const response=await fetch(SUPABASE_URL+path,{...options,headers:headers(options.headers||{})});
-  const raw=await response.text();let data=null;try{data=raw?JSON.parse(raw):null;}catch{data=raw;}
-  if(!response.ok){const message=data?.msg||data?.message||data?.error_description||data?.error||"요청 실패 ("+response.status+")";throw new Error(message);}
-  return data;
-}
-function setMode(mode){
-  state.mode=mode;
-  $("loginTab").classList.toggle("active",mode==="login");$("signupTab").classList.toggle("active",mode==="signup");
-  $("loginTab").classList.toggle("ghost",mode!=="login");$("signupTab").classList.toggle("ghost",mode!=="signup");
-  $("authTitle").textContent=mode==="login"?"로그인":"회원가입";
-  $("authSubmit").textContent=mode==="login"?"로그인":"계정 만들기";
-  $("nicknameWrap").classList.toggle("hidden",mode!=="signup");
-  $("nickname").required=mode==="signup";$("password").autocomplete=mode==="login"?"current-password":"new-password";setMessage("");
-}
+const $=id=>document.getElementById(id);
+const ADMIN_ID="admin1234";
+const ADMIN_PASSWORD="anscksdud1*";
+const DB_KEY="eba_local_database_v2";
+const SESSION_KEY="eba_local_session_v2";
+const state={mode:"login",user:null,adminPage:"overview"};
+const authView=$("authView"),appView=$("appView");
+function readDB(){try{return JSON.parse(localStorage.getItem(DB_KEY))||{members:[],notices:[],logs:[]}}catch{return{members:[],notices:[],logs:[]}}}
+function writeDB(db){localStorage.setItem(DB_KEY,JSON.stringify(db))}
+function logAction(action,details=""){const db=readDB();db.logs.unshift({action,details,at:new Date().toLocaleString("ko-KR")});db.logs=db.logs.slice(0,300);writeDB(db)}
+function setMessage(message,bad=true){$("authMessage").textContent=message||"";$("authMessage").style.color=bad?"var(--red)":"var(--green)"}
+function validUsername(name){return /^[a-z0-9_-]{3,24}$/.test(name)}
+function setMode(mode){state.mode=mode;$("loginTab").classList.toggle("active",mode==="login");$("signupTab").classList.toggle("active",mode==="signup");$("loginTab").classList.toggle("ghost",mode!=="login");$("signupTab").classList.toggle("ghost",mode!=="signup");$("authTitle").textContent=mode==="login"?"로그인":"회원가입";$("authSubmit").textContent=mode==="login"?"로그인":"계정 만들기";$("nicknameWrap").classList.toggle("hidden",mode!=="signup");$("nickname").required=mode==="signup";$("password").autocomplete=mode==="login"?"current-password":"new-password";$("password").value="";setMessage("")}
 $("loginTab").onclick=()=>setMode("login");$("signupTab").onclick=()=>setMode("signup");
-async function loadProfile(user){
-  const rows=await api("/rest/v1/profiles?select=id,email,username,nickname,role,status,created_at&id=eq."+encodeURIComponent(user.id));
-  const profile=rows?.[0];if(!profile)throw new Error("회원 프로필이 없습니다. Supabase profiles 테이블과 가입 트리거를 확인하세요.");
-  if(profile.status!=="active"){await signOut(false);throw new Error("이 계정은 운영자에 의해 정지되었습니다.");}
-  state.profile=profile;state.user=user;return profile;
-}
-function enterApp(){
-  authView.classList.add("hidden");appView.classList.remove("hidden");
-  const p=state.profile;$("userBadge").textContent=(p.nickname||p.username||"회원")+" · "+(p.role==="admin"?"관리자":"회원");
-  $("adminOpen").classList.toggle("hidden",p.role!=="admin");
-  resetGame();
-}
-async function authSubmit(e){
-  e.preventDefault();const username=$("username").value.trim().toLowerCase(),password=$("password").value;
-  if(!validUsername(username))return setMessage("아이디는 영문 소문자, 숫자, _ 또는 -로 3~24자 입력하세요.");
-  if(password.length<8)return setMessage("비밀번호는 8자 이상이어야 합니다.");
-  $("authSubmit").disabled=true;setMessage(state.mode==="login"?"로그인 중...":"회원가입 중...",false);
-  try{
-    const email=usernameEmail(username);
-    if(state.mode==="signup"){
-      const nickname=$("nickname").value.trim().slice(0,8);if(!nickname)throw new Error("게임 닉네임을 입력하세요.");
-      const result=await api("/auth/v1/signup",{method:"POST",body:JSON.stringify({email,password,data:{username,nickname}})});
-      if(!result?.access_token)throw new Error("이메일 확인이 켜져 있을 수 있습니다. Supabase Authentication에서 Confirm email을 OFF로 설정하세요.");
-      state.session=result;localStorage.setItem("eba_session",JSON.stringify(result));await loadProfile(result.user);enterApp();
-    }else{
-      const result=await api("/auth/v1/token?grant_type=password",{method:"POST",body:JSON.stringify({email,password})});
-      state.session=result;localStorage.setItem("eba_session",JSON.stringify(result));await loadProfile(result.user);enterApp();
-    }
-  }catch(err){setMessage(err.message||"인증에 실패했습니다.");}
-  finally{$("authSubmit").disabled=false;}
-}
+async function hashPassword(value){const bytes=new TextEncoder().encode(value);const digest=await crypto.subtle.digest("SHA-256",bytes);return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,"0")).join("")}
+function enterApp(user){state.user=user;authView.classList.add("hidden");appView.classList.remove("hidden");$("userBadge").textContent=(user.nickname||user.username)+" · "+(user.role==="admin"?"관리자":"회원");$("adminOpen").classList.toggle("hidden",user.role!=="admin");$("adminPanel").classList.add("hidden");resetGame()}
+async function authSubmit(e){e.preventDefault();const username=$("username").value.trim().toLowerCase(),password=$("password").value;if(!validUsername(username))return setMessage("아이디는 영문 소문자, 숫자, _ 또는 -로 3~24자 입력하세요.");if(password.length<8)return setMessage("비밀번호는 8자 이상이어야 합니다.");$("authSubmit").disabled=true;
+try{
+ if(state.mode==="login"){
+  if(username===ADMIN_ID&&password===ADMIN_PASSWORD){const admin={username:ADMIN_ID,nickname:"관리자",role:"admin",status:"active"};localStorage.setItem(SESSION_KEY,JSON.stringify(admin));logAction("관리자 로그인",ADMIN_ID);enterApp(admin);return}
+  const db=readDB(),member=db.members.find(m=>m.username===username);if(!member||member.passwordHash!==await hashPassword(password))throw Error("아이디 또는 비밀번호가 올바르지 않습니다.");if(member.status!=="active")throw Error("정지된 계정입니다. 관리자에게 문의하세요.");const user={username:member.username,nickname:member.nickname,role:"member",status:"active"};localStorage.setItem(SESSION_KEY,JSON.stringify(user));logAction("회원 로그인",username);enterApp(user);
+ }else{
+  if(username===ADMIN_ID)throw Error("이 아이디는 사용할 수 없습니다.");const nickname=$("nickname").value.trim().slice(0,8);if(!nickname)throw Error("게임 닉네임을 입력하세요.");const db=readDB();if(db.members.some(m=>m.username===username))throw Error("이미 사용 중인 아이디입니다.");db.members.push({username,nickname,passwordHash:await hashPassword(password),role:"member",status:"active",createdAt:new Date().toLocaleString("ko-KR")});writeDB(db);logAction("회원가입",username);setMode("login");$("username").value=username;setMessage("회원가입 완료! 로그인해 주세요.",false);
+ }
+}catch(err){setMessage(err.message||"인증에 실패했습니다.")}finally{$("authSubmit").disabled=false}}
 $("authForm").addEventListener("submit",authSubmit);
-async function signOut(show=true){
-  try{if(state.session?.access_token)await api("/auth/v1/logout",{method:"POST"});}catch{}
-  state.session=null;state.user=null;state.profile=null;localStorage.removeItem("eba_session");
-  appView.classList.add("hidden");authView.classList.remove("hidden");$("adminPanel").classList.add("hidden");setMode("login");
-  if(show)setMessage("로그아웃되었습니다.",false);
-}
-$("logout").onclick=()=>signOut();
-async function restoreSession(){
-  try{
-    const saved=JSON.parse(localStorage.getItem("eba_session")||"null");if(!saved?.access_token)return;
-    state.session=saved;
-    const user=await api("/auth/v1/user");await loadProfile(user);enterApp();
-  }catch{localStorage.removeItem("eba_session");state.session=null;state.profile=null;}
-}
-
-/* Canvas 기반 순수 JavaScript 전투 게임 */
-const canvas=$("gameCanvas"),ctx=canvas.getContext("2d");
-const game={running:false,player:{x:480,y:300,hp:100,speed:3.2,inv:0},bots:[],shots:[],enemyShots:[],keys:{},mouse:{x:700,y:300},kills:0,time:90,last:0,raf:0};
-function spawnBot(){const edge=Math.floor(Math.random()*4);let x=edge===0?25:edge===1?935:Math.random()*960,y=edge===2?25:edge===3?575:Math.random()*600;game.bots.push({x,y,hp:3,speed:1.0+Math.random()*.55,fire:Math.random()*80,r:18});}
-function resetGame(){cancelAnimationFrame(game.raf);game.running=false;game.player={x:480,y:300,hp:100,speed:3.2,inv:0};game.bots=[];game.shots=[];game.enemyShots=[];game.kills=0;game.time=90;for(let i=0;i<5;i++)spawnBot();updateHud();drawGame();$("gameOverlay").classList.remove("hidden");$("gameOverlay").querySelector("h2").textContent="전투를 시작할까요?";$("gameOverlay").querySelector("p").textContent="WASD로 이동하고 마우스 클릭으로 공격하세요. CPU를 처치하면 점수를 얻습니다.";$("startGame").textContent="전투 시작";}
-function updateHud(){const hp=Math.max(0,game.player.hp);$("hpStat").textContent="❤️ HP "+hp;$("scoreStat").textContent="🏆 "+game.kills+" KILL";$("timeStat").textContent="⏱ "+Math.max(0,Math.ceil(game.time));$("hpText").textContent=hp+" / 100";$("killsText").textContent=game.kills;$("hpBar").style.width=hp+"%";}
-function startGame(){if(game.running)return;game.running=true;game.last=performance.now();$("gameOverlay").classList.add("hidden");game.raf=requestAnimationFrame(loop);}
-function endGame(title){game.running=false;cancelAnimationFrame(game.raf);$("gameOverlay").classList.remove("hidden");$("gameOverlay").querySelector("h2").textContent=title;$("gameOverlay").querySelector("p").textContent="처치 수: "+game.kills+" · 다시 시작 버튼으로 재도전할 수 있습니다.";$("startGame").textContent="다시 도전";updateHud();}
-function fire(){if(!game.running)return;const p=game.player,dx=game.mouse.x-p.x,dy=game.mouse.y-p.y,d=Math.hypot(dx,dy)||1;game.shots.push({x:p.x,y:p.y,vx:dx/d*9,vy:dy/d*9,life:65});}
-function loop(now){if(!game.running)return;const dt=Math.min(2,(now-game.last)/16.67);game.last=now;game.time-=dt/60;
-  const p=game.player,k=game.keys;let dx=(k.d||k.arrowright?1:0)-(k.a||k.arrowleft?1:0),dy=(k.s||k.arrowdown?1:0)-(k.w||k.arrowup?1:0),len=Math.hypot(dx,dy)||1;
-  let speed=p.speed*(k.shift?1.85:1);p.x=Math.max(18,Math.min(942,p.x+dx/len*speed*dt));p.y=Math.max(18,Math.min(582,p.y+dy/len*speed*dt));if(p.inv>0)p.inv-=dt;
-  if(game.bots.length<6&&Math.random()<.012*dt)spawnBot();
-  for(const b of game.bots){const vx=p.x-b.x,vy=p.y-b.y,d=Math.hypot(vx,vy)||1;b.x+=vx/d*b.speed*dt;b.y+=vy/d*b.speed*dt;if(d<34&&p.inv<=0){p.hp-=.35*dt;p.inv=0;}b.fire-=dt;if(b.fire<=0&&d<500){game.enemyShots.push({x:b.x,y:b.y,vx:vx/d*3.5,vy:vy/d*3.5,life:140});b.fire=70+Math.random()*50;}}
-  for(const s of game.shots){s.x+=s.vx*dt;s.y+=s.vy*dt;s.life-=dt;for(const b of game.bots){if(b.hp>0&&Math.hypot(s.x-b.x,s.y-b.y)<22){b.hp-=1;s.life=0;if(b.hp<=0)game.kills++;break;}}}
-  game.shots=game.shots.filter(s=>s.life>0&&s.x>0&&s.x<960&&s.y>0&&s.y<600);game.bots=game.bots.filter(b=>b.hp>0);
-  for(const s of game.enemyShots){s.x+=s.vx*dt;s.y+=s.vy*dt;s.life-=dt;if(Math.hypot(s.x-p.x,s.y-p.y)<17&&p.inv<=0){p.hp-=8;p.inv=28;s.life=0;}}
-  game.enemyShots=game.enemyShots.filter(s=>s.life>0&&s.x>0&&s.x<960&&s.y>0&&s.y<600);
-  updateHud();drawGame();if(p.hp<=0){endGame("전투 종료");return;}if(game.time<=0){endGame("시간 종료");return;}game.raf=requestAnimationFrame(loop);
-}
-function drawGame(){ctx.clearRect(0,0,960,600);ctx.fillStyle="#0a1425";ctx.fillRect(0,0,960,600);ctx.strokeStyle="#1d2d49";ctx.lineWidth=1;for(let x=0;x<960;x+=48){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,600);ctx.stroke();}for(let y=0;y<600;y+=48){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(960,y);ctx.stroke();}
-  ctx.fillStyle="#142642";ctx.fillRect(170,105,110,70);ctx.fillRect(670,425,120,80);ctx.fillRect(420,35,90,55);ctx.strokeStyle="#38527c";ctx.strokeRect(170,105,110,70);ctx.strokeRect(670,425,120,80);ctx.strokeRect(420,35,90,55);
-  for(const s of game.shots){ctx.fillStyle="#56e8f2";ctx.beginPath();ctx.arc(s.x,s.y,5,0,Math.PI*2);ctx.fill();}
-  for(const s of game.enemyShots){ctx.fillStyle="#ff6a82";ctx.beginPath();ctx.arc(s.x,s.y,6,0,Math.PI*2);ctx.fill();}
-  for(const b of game.bots){ctx.fillStyle="#ff5975";ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);ctx.fill();ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(b.x-6,b.y-3,3,0,Math.PI*2);ctx.arc(b.x+6,b.y-3,3,0,Math.PI*2);ctx.fill();ctx.fillStyle="#351b30";ctx.fillRect(b.x-18,b.y-29,36,5);ctx.fillStyle="#ff8294";ctx.fillRect(b.x-18,b.y-29,36*Math.max(0,b.hp/3),5);}
-  const p=game.player,ang=Math.atan2(game.mouse.y-p.y,game.mouse.x-p.x);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(ang);ctx.fillStyle=p.inv>0?"#b8c7ff":"#638cff";ctx.beginPath();ctx.arc(0,0,17,0,Math.PI*2);ctx.fill();ctx.fillStyle="#d7faff";ctx.fillRect(5,-5,25,10);ctx.restore();
-}
-function pointer(e){const r=canvas.getBoundingClientRect();game.mouse.x=(e.clientX-r.left)/r.width*960;game.mouse.y=(e.clientY-r.top)/r.height*600;}
-canvas.addEventListener("pointermove",pointer);canvas.addEventListener("pointerdown",e=>{pointer(e);fire();});
-window.addEventListener("keydown",e=>{const key=e.key.toLowerCase();game.keys[key]=true;if([" ","arrowup","arrowdown","arrowleft","arrowright"].includes(key))e.preventDefault();if(key===" " )fire();if(key==="r"&&!appView.classList.contains("hidden"))resetGame();});
-window.addEventListener("keyup",e=>game.keys[e.key.toLowerCase()]=false);
-$("startGame").onclick=startGame;$("restart").onclick=resetGame;
-const words=[["Victory","승리"],["Courage","용기"],["Strategy","전략"],["Defend","방어하다"],["Attack","공격하다"],["Champion","챔피언"],["Dodge","피하다"],["Powerful","강력한"]];
-$("nextWord").onclick=()=>{const w=words[Math.floor(Math.random()*words.length)];$("word").textContent=w[0];$("meaning").textContent=w[1];};
-
-/* 관리자 기능: RLS와 서버 RPC가 허용한 작업만 실행 */
-$("adminOpen").onclick=()=>{$("adminPanel").classList.remove("hidden");renderAdmin("overview");};
+function signOut(){if(state.user)logAction("로그아웃",state.user.username);state.user=null;localStorage.removeItem(SESSION_KEY);appView.classList.add("hidden");authView.classList.remove("hidden");$("adminPanel").classList.add("hidden");setMode("login")}
+$("logout").onclick=signOut;
+function restoreSession(){try{const u=JSON.parse(localStorage.getItem(SESSION_KEY)||"null");if(!u)return;if(u.role==="admin"&&u.username===ADMIN_ID){enterApp(u);return}const m=readDB().members.find(x=>x.username===u.username);if(m&&m.status==="active")enterApp({username:m.username,nickname:m.nickname,role:"member",status:m.status});else localStorage.removeItem(SESSION_KEY)}catch{localStorage.removeItem(SESSION_KEY)}}
+function escapeHtml(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+$("adminOpen").onclick=()=>{if(state.user?.role!=="admin")return;$("adminPanel").classList.remove("hidden");renderAdmin("overview")};
 $("adminClose").onclick=()=>$("adminPanel").classList.add("hidden");
 document.querySelectorAll("[data-admin]").forEach(b=>b.onclick=()=>renderAdmin(b.dataset.admin));
-async function renderAdmin(page){
-  if(state.profile?.role!=="admin")return;
-  state.adminPage=page;const box=$("adminContent");box.innerHTML="<p class='muted'>불러오는 중...</p>";
-  try{
-    if(page==="overview"){
-      const [members,notices]=await Promise.all([
-        api("/rest/v1/profiles?select=id,role,status&limit=1000"),
-        api("/rest/v1/announcements?select=id&limit=1000")
-      ]);
-      const active=members.filter(x=>x.status==="active").length,suspended=members.filter(x=>x.status!=="active").length,admins=members.filter(x=>x.role==="admin").length;
-      box.innerHTML=`<div class="stats"><span class="stat">전체 회원 ${members.length}</span><span class="stat">활성 ${active}</span><span class="stat">정지 ${suspended}</span><span class="stat">관리자 ${admins}</span><span class="stat">공지 ${notices.length}</span></div><p class="muted">통계는 Supabase profiles / announcements 조회 결과입니다.</p>`;
-    }else if(page==="members"){
-      const rows=await api("/rest/v1/profiles?select=id,username,nickname,role,status,created_at&order=created_at.desc&limit=300");
-      box.innerHTML=`<h3>회원 목록</h3><input id="memberSearch" placeholder="아이디 / 닉네임 검색"><div style="overflow:auto"><table class="table"><thead><tr><th>아이디</th><th>닉네임</th><th>권한</th><th>상태</th><th>관리</th></tr></thead><tbody id="memberRows"></tbody></table></div>`;
-      const draw=()=>{$("memberRows").innerHTML=rows.filter(r=>((r.username||"")+" "+(r.nickname||"")).toLowerCase().includes($("memberSearch").value.toLowerCase())).map(r=>`<tr><td>${escapeHtml(r.username||"-")}</td><td>${escapeHtml(r.nickname||"-")}</td><td>${escapeHtml(r.role||"member")}</td><td>${escapeHtml(r.status||"unknown")}</td><td><button class="${r.status==="suspended"?"good":"danger"}" data-member="${r.id}" data-status="${r.status==="suspended"?"active":"suspended"}">${r.status==="suspended"?"복구":"정지"}</button></td></tr>`).join("");};
-      draw();$("memberSearch").oninput=draw;
-      box.querySelectorAll("[data-member]").forEach(btn=>btn.onclick=async()=>{if(btn.dataset.member===state.user.id)return alert("본인 계정은 이 메뉴에서 변경할 수 없습니다.");try{await api("/rest/v1/rpc/admin_set_member_status",{method:"POST",body:JSON.stringify({target_user_id:btn.dataset.member,new_status:btn.dataset.status})});alert("회원 상태가 변경되었습니다.");renderAdmin("members");}catch(e){alert("변경 실패: "+e.message);}});
-    }else if(page==="notices"){
-      const rows=await api("/rest/v1/announcements?select=*&order=created_at.desc&limit=100");
-      box.innerHTML=`<h3>공지 등록</h3><label>제목</label><input id="noticeTitle" maxlength="100" placeholder="공지 제목"><label>내용</label><textarea id="noticeBody" rows="4" style="width:100%;background:#0a1221;color:white;border:1px solid var(--line);border-radius:10px;padding:12px"></textarea><button id="noticeSend">공지 등록</button><h3 style="margin-top:24px">등록된 공지</h3><div id="noticeList"></div>`;
-      $("noticeList").innerHTML=rows.map(n=>`<div class="notice"><b>${escapeHtml(n.title||"제목 없음")}</b><div>${escapeHtml(n.body||n.content||"")}</div><small>${escapeHtml(n.created_at||"")}</small></div>`).join("")||"<p class='muted'>등록된 공지가 없습니다.</p>";
-      $("noticeSend").onclick=async()=>{const title=$("noticeTitle").value.trim(),body=$("noticeBody").value.trim();if(!title||!body)return alert("제목과 내용을 입력하세요.");try{await api("/rest/v1/announcements",{method:"POST",headers:{"Prefer":"return=minimal"},body:JSON.stringify({title,body,created_by:state.user.id})});renderAdmin("notices");}catch(e){alert("공지 등록 실패: "+e.message);}};
-    }else if(page==="logs"){
-      const rows=await api("/rest/v1/admin_logs?select=*&order=created_at.desc&limit=100");
-      box.innerHTML="<h3>최근 관리자 작업</h3>"+(rows.map(x=>`<div class='notice'><b>${escapeHtml(x.action||x.event||"작업")}</b><div>${escapeHtml(JSON.stringify(x.details||x))}</div><small>${escapeHtml(x.created_at||"")}</small></div>`).join("")||"<p class='muted'>로그가 없습니다.</p>");
-    }
-  }catch(e){box.innerHTML="<p class='msg'>관리자 데이터 조회 실패: "+escapeHtml(e.message)+"</p><p class='muted small'>Supabase 테이블, RPC, RLS 정책이 설치되어 있는지 확인하세요.</p>";}
+function renderAdmin(page){if(state.user?.role!=="admin")return;state.adminPage=page;const box=$("adminContent"),db=readDB();
+if(page==="overview"){const active=db.members.filter(x=>x.status==="active").length,suspended=db.members.length-active;box.innerHTML=`<div class="stats"><span class="stat">전체 회원 ${db.members.length}</span><span class="stat">활성 ${active}</span><span class="stat">정지 ${suspended}</span><span class="stat">관리자 1</span><span class="stat">공지 ${db.notices.length}</span></div><p class="muted">현재 브라우저에 저장된 로컬 데이터 통계입니다.</p>`}
+else if(page==="members"){box.innerHTML=`<h3>회원 목록</h3><input id="memberSearch" placeholder="아이디 / 닉네임 검색"><div style="overflow:auto"><table class="table"><thead><tr><th>아이디</th><th>닉네임</th><th>가입일</th><th>상태</th><th>관리</th></tr></thead><tbody id="memberRows"></tbody></table></div>`;const draw=()=>{const current=readDB();$("memberRows").innerHTML=current.members.filter(m=>(m.username+" "+m.nickname).toLowerCase().includes($("memberSearch").value.toLowerCase())).map(m=>`<tr><td>${escapeHtml(m.username)}</td><td>${escapeHtml(m.nickname)}</td><td>${escapeHtml(m.createdAt)}</td><td>${m.status==="active"?"활성":"정지"}</td><td><button class="${m.status==="suspended"?"good":"danger"}" data-user="${escapeHtml(m.username)}">${m.status==="suspended"?"복구":"정지"}</button></td></tr>`).join("")||"<tr><td colspan='5'>가입 회원이 없습니다.</td></tr>";$("memberRows").querySelectorAll("[data-user]").forEach(btn=>btn.onclick=()=>{const d=readDB(),target=d.members.find(x=>x.username===btn.dataset.user);if(!target)return;target.status=target.status==="active"?"suspended":"active";writeDB(d);logAction(target.status==="active"?"회원 복구":"회원 정지",target.username);renderAdmin("members")})};draw();$("memberSearch").oninput=draw}
+else if(page==="notices"){box.innerHTML=`<h3>공지 등록</h3><label>제목</label><input id="noticeTitle" maxlength="100" placeholder="공지 제목"><label>내용</label><textarea id="noticeBody" rows="4" placeholder="공지 내용"></textarea><button id="noticeSend">공지 등록</button><h3 style="margin-top:24px">등록된 공지</h3><div id="noticeList"></div>`;const draw=()=>{$("noticeList").innerHTML=readDB().notices.map((n,i)=>`<div class="notice"><b>${escapeHtml(n.title)}</b><div>${escapeHtml(n.body)}</div><small>${escapeHtml(n.at)}</small> <button class="danger" data-del="${i}" style="padding:6px 9px">삭제</button></div>`).join("")||"<p class='muted'>등록된 공지가 없습니다.</p>";$("noticeList").querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{const d=readDB();d.notices.splice(Number(b.dataset.del),1);writeDB(d);logAction("공지 삭제",b.dataset.del);renderAdmin("notices")})};draw();$("noticeSend").onclick=()=>{const title=$("noticeTitle").value.trim(),body=$("noticeBody").value.trim();if(!title||!body)return alert("제목과 내용을 입력하세요.");const d=readDB();d.notices.unshift({title,body,at:new Date().toLocaleString("ko-KR")});writeDB(d);logAction("공지 등록",title);renderAdmin("notices")}}
+else if(page==="logs"){box.innerHTML="<h3>최근 관리자 작업</h3>"+(db.logs.map(x=>`<div class='notice'><b>${escapeHtml(x.action)}</b><div>${escapeHtml(x.details)}</div><small>${escapeHtml(x.at)}</small></div>`).join("")||"<p class='muted'>로그가 없습니다.</p>")}
 }
-function escapeHtml(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+const canvas=$("gameCanvas"),ctx=canvas.getContext("2d");
+const game={running:false,player:{x:480,y:300,hp:100,speed:3.2,inv:0},bots:[],shots:[],enemyShots:[],keys:{},mouse:{x:700,y:300},kills:0,time:90,last:0,raf:0};
+function spawnBot(){const edge=Math.floor(Math.random()*4);let x=edge===0?25:edge===1?935:Math.random()*960,y=edge===2?25:edge===3?575:Math.random()*600;game.bots.push({x,y,hp:3,speed:1+Math.random()*.55,fire:Math.random()*80,r:18})}
+function resetGame(){cancelAnimationFrame(game.raf);game.running=false;game.player={x:480,y:300,hp:100,speed:3.2,inv:0};game.bots=[];game.shots=[];game.enemyShots=[];game.kills=0;game.time=90;for(let i=0;i<5;i++)spawnBot();updateHud();drawGame();$("gameOverlay").classList.remove("hidden");$("gameOverlay").querySelector("h2").textContent="전투를 시작할까요?";$("gameOverlay").querySelector("p").textContent="WASD로 이동하고 마우스 클릭으로 공격하세요. CPU를 처치하면 점수를 얻습니다.";$("startGame").textContent="전투 시작"}
+function updateHud(){const hp=Math.max(0,Math.ceil(game.player.hp));$("hpStat").textContent="❤️ HP "+hp;$("scoreStat").textContent="🏆 "+game.kills+" KILL";$("timeStat").textContent="⏱ "+Math.max(0,Math.ceil(game.time));$("hpText").textContent=hp+" / 100";$("killsText").textContent=game.kills;$("hpBar").style.width=hp+"%"}
+function startGame(){if(game.running)return;game.running=true;game.last=performance.now();$("gameOverlay").classList.add("hidden");game.raf=requestAnimationFrame(loop)}
+function endGame(title){game.running=false;cancelAnimationFrame(game.raf);$("gameOverlay").classList.remove("hidden");$("gameOverlay").querySelector("h2").textContent=title;$("gameOverlay").querySelector("p").textContent="처치 수: "+game.kills+" · 다시 시작 버튼으로 재도전할 수 있습니다.";$("startGame").textContent="다시 도전";updateHud()}
+function fire(){if(!game.running)return;const p=game.player,dx=game.mouse.x-p.x,dy=game.mouse.y-p.y,d=Math.hypot(dx,dy)||1;game.shots.push({x:p.x,y:p.y,vx:dx/d*9,vy:dy/d*9,life:65})}
+function loop(now){if(!game.running)return;const dt=Math.min(2,(now-game.last)/16.67);game.last=now;game.time-=dt/60;const p=game.player,k=game.keys;let dx=(k.d||k.arrowright?1:0)-(k.a||k.arrowleft?1:0),dy=(k.s||k.arrowdown?1:0)-(k.w||k.arrowup?1:0),len=Math.hypot(dx,dy)||1;let speed=p.speed*(k.shift?1.85:1);p.x=Math.max(18,Math.min(942,p.x+dx/len*speed*dt));p.y=Math.max(18,Math.min(582,p.y+dy/len*speed*dt));if(p.inv>0)p.inv-=dt;if(game.bots.length<6&&Math.random()<.012*dt)spawnBot();
+for(const b of game.bots){const vx=p.x-b.x,vy=p.y-b.y,d=Math.hypot(vx,vy)||1;b.x+=vx/d*b.speed*dt;b.y+=vy/d*b.speed*dt;if(d<34&&p.inv<=0){p.hp-=.35*dt;p.inv=0}b.fire-=dt;if(b.fire<=0&&d<500){game.enemyShots.push({x:b.x,y:b.y,vx:vx/d*3.5,vy:vy/d*3.5,life:140});b.fire=70+Math.random()*50}}
+for(const s of game.shots){s.x+=s.vx*dt;s.y+=s.vy*dt;s.life-=dt;for(const b of game.bots){if(b.hp>0&&Math.hypot(s.x-b.x,s.y-b.y)<22){b.hp--;s.life=0;if(b.hp<=0)game.kills++;break}}}game.shots=game.shots.filter(s=>s.life>0&&s.x>0&&s.x<960&&s.y>0&&s.y<600);game.bots=game.bots.filter(b=>b.hp>0);
+for(const s of game.enemyShots){s.x+=s.vx*dt;s.y+=s.vy*dt;s.life-=dt;if(Math.hypot(s.x-p.x,s.y-p.y)<17&&p.inv<=0){p.hp-=8;p.inv=28;s.life=0}}game.enemyShots=game.enemyShots.filter(s=>s.life>0&&s.x>0&&s.x<960&&s.y>0&&s.y<600);updateHud();drawGame();if(p.hp<=0){endGame("전투 종료");return}if(game.time<=0){endGame("시간 종료");return}game.raf=requestAnimationFrame(loop)}
+function drawGame(){ctx.clearRect(0,0,960,600);ctx.fillStyle="#0a1425";ctx.fillRect(0,0,960,600);ctx.strokeStyle="#1d2d49";ctx.lineWidth=1;for(let x=0;x<960;x+=48){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,600);ctx.stroke()}for(let y=0;y<600;y+=48){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(960,y);ctx.stroke()}ctx.fillStyle="#142642";ctx.fillRect(170,105,110,70);ctx.fillRect(670,425,120,80);ctx.fillRect(420,35,90,55);ctx.strokeStyle="#38527c";ctx.strokeRect(170,105,110,70);ctx.strokeRect(670,425,120,80);ctx.strokeRect(420,35,90,55);for(const s of game.shots){ctx.fillStyle="#56e8f2";ctx.beginPath();ctx.arc(s.x,s.y,5,0,Math.PI*2);ctx.fill()}for(const s of game.enemyShots){ctx.fillStyle="#ff6a82";ctx.beginPath();ctx.arc(s.x,s.y,6,0,Math.PI*2);ctx.fill()}for(const b of game.bots){ctx.fillStyle="#ff5975";ctx.beginPath();ctx.arc(b.x,b.y,b.r,0,Math.PI*2);ctx.fill();ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(b.x-6,b.y-3,3,0,Math.PI*2);ctx.arc(b.x+6,b.y-3,3,0,Math.PI*2);ctx.fill();ctx.fillStyle="#351b30";ctx.fillRect(b.x-18,b.y-29,36,5);ctx.fillStyle="#ff8294";ctx.fillRect(b.x-18,b.y-29,36*Math.max(0,b.hp/3),5)}const p=game.player,ang=Math.atan2(game.mouse.y-p.y,game.mouse.x-p.x);ctx.save();ctx.translate(p.x,p.y);ctx.rotate(ang);ctx.fillStyle=p.inv>0?"#b8c7ff":"#638cff";ctx.beginPath();ctx.arc(0,0,17,0,Math.PI*2);ctx.fill();ctx.fillStyle="#d7faff";ctx.fillRect(5,-5,25,10);ctx.restore()}
+function pointer(e){const r=canvas.getBoundingClientRect();game.mouse.x=(e.clientX-r.left)/r.width*960;game.mouse.y=(e.clientY-r.top)/r.height*600}
+canvas.addEventListener("pointermove",pointer);canvas.addEventListener("pointerdown",e=>{pointer(e);fire()});window.addEventListener("keydown",e=>{const key=e.key.toLowerCase();game.keys[key]=true;if([" ","arrowup","arrowdown","arrowleft","arrowright"].includes(key))e.preventDefault();if(key===" ")fire();if(key==="r"&&!appView.classList.contains("hidden"))resetGame()});window.addEventListener("keyup",e=>game.keys[e.key.toLowerCase()]=false);
+$("startGame").onclick=startGame;$("restart").onclick=resetGame;
+const words=[["Victory","승리"],["Courage","용기"],["Strategy","전략"],["Defend","방어하다"],["Attack","공격하다"],["Champion","챔피언"],["Dodge","피하다"],["Powerful","강력한"]];$("nextWord").onclick=()=>{const w=words[Math.floor(Math.random()*words.length)];$("word").textContent=w[0];$("meaning").textContent=w[1]};
 restoreSession();
 </script>
 </body>
